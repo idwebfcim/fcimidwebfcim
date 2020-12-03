@@ -24,7 +24,7 @@ pipeline {
           
           stage("Testing") {
                steps {
-                   echo "Sunt aici etapa TEST"
+                   sh '. mediulizolat/bin/activate && python3 tests.py && deactivate'
                }
           }
      
