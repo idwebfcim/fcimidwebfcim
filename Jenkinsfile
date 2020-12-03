@@ -1,6 +1,8 @@
 #!groovy
 
 pipeline {
+     
+     agent any
 
      options {
          timestamps()
