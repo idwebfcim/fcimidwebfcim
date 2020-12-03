@@ -15,6 +15,10 @@ COPY config.py config.py
 
 COPY microblog.py microblog.py
 
-EXPOSE 7000
+RUN flask db stamp head
+RUN flask db migrate 
+RUN flask db upgrade
+
+EXPOSE 5000
 
 ENTRYPOINT flask run --host=0.0.0.0
