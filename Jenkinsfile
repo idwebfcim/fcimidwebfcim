@@ -31,7 +31,11 @@ pipeline {
      
      }
 
-
+     post {
+          always {
+               sh 'rm -rf FCIMIDWEBCI'
+          }
+     }
 
 
 }
