@@ -24,7 +24,7 @@ pipeline {
          
          stage("Testarea") {
              steps {
-                  echo "Testam functionalul"
+                  sh '. FCIMIDWEBCI/bin/activate && python3 tests.py && deactivate'
              }
          
          }
