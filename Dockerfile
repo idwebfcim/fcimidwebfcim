@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 
-WORKID /home/fcimutm
+WORKDIR /home/fcimutm
 
 COPY app app
 COPY deployment deployment
