@@ -13,7 +13,11 @@ pipeline {
          stage("Instalare dependente") {
          
              steps {
-                 echo "Hello, instalez dependentele"
+                 sh 'python3 -m venv FCIMIDWEBCI && . FCIMIDWEBCI/bin/activate && \
+                     pip3 install --upgrade pip && \
+                     pip3 install wheel && \
+                     pip3 install -r requirements.txt && \
+                     flask db stamp head && flask db migrate && flask db upgrade && deactivate'
              }
          
          }
