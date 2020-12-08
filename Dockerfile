@@ -11,7 +11,7 @@ COPY requirements.txt requirements.txt
 COPY microblog.py microblog.py
 
 RUN pip3 install --upgrade pip
-RUN install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 
 RUN flask db stamp head
